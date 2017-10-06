@@ -20,7 +20,7 @@ namespace LoginViewSample.Droid
 			base.OnCreate (bundle);
 
 			global::Xamarin.Forms.Forms.Init (this, bundle);
-			LoadApplication (new LoginViewSample.App ());
+			LoadApplication (new Core.App ());
 		}
 	}
 }

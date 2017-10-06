@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Foundation;
+﻿using Foundation;
+using LoginViewSample.Core;
 using UIKit;
 
 namespace LoginViewSample.iOS
@@ -23,7 +20,7 @@ namespace LoginViewSample.iOS
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
 			global::Xamarin.Forms.Forms.Init ();
-			LoadApplication (new LoginViewSample.App ());
+			LoadApplication (new App ());
 
 			return base.FinishedLaunching (app, options);
 		}
