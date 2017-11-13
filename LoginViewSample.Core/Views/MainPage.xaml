@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:LoginViewSample"
-             x:Class="LoginViewSample.Core.MainPage">
+             x:Class="LoginViewSample.Core.Views.MainPage">
 
-	<Label Text="Welcome to Xamarin Forms!" 
+	<Button Text="Logout" 
+            Command="{Binding LogoutCommand}"
            VerticalOptions="Center" 
            HorizontalOptions="Center" />
 

@@ -1,17 +1,26 @@
-﻿using Xamarin.Forms;
+﻿using LoginViewSample.Core.Services;
+using Xamarin.Forms;
 
 namespace LoginViewSample.Core
 {
 	public partial class App : Application
 	{
-		public App ()
+	    private static readonly FormsNavigationService _navigationService =
+	        new FormsNavigationService();
+
+		public App()
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+            _navigationService.Configure(PageNames.LoginPage, typeof(Views.LoginPage));
+            _navigationService.Configure(PageNames.MainPage, typeof(Views.MainPage));
+
+			MainPage = _navigationService.SetRootPage(nameof(Views.MainPage));
 		}
 
-		protected override void OnStart ()
+	    public static INavigationService NavigationService { get; } = _navigationService;
+
+	    protected override void OnStart ()
 		{
 			// Handle when your app starts
 		}
