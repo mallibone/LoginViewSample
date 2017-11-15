@@ -11,6 +11,9 @@ namespace LoginViewSample.Core.Views
 		{
 			InitializeComponent ();
 		    BindingContext = ViewModel;
+
+		    UsernameEntry.Completed += (sender, args) => { PasswordEntry.Focus(); };
+		    PasswordEntry.Completed += (sender, args) => { ViewModel.AuthenticateCommand.Execute(null); };
 		}
 
 	    public LoginViewModel ViewModel { get; set; } = new LoginViewModel(App.NavigationService);

@@ -11,9 +11,11 @@
             </Grid.RowDefinitions>
             <StackLayout Grid.Row="0">
                 <Label Text="Please enter your credentials" />
-                <Entry Text="{Binding Username}"
+                <Entry x:Name="UsernameEntry" 
+                       Text="{Binding Username}"
                        Placeholder="Username" />
-                <Entry Text="{Binding Password}"
+                <Entry x:Name="PasswordEntry"
+                       Text="{Binding Password}"
                        Placeholder="Password"
                        IsPassword="True" />
                 <Label Text="Invalid credentials entered" 
