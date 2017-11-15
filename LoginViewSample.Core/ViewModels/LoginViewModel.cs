@@ -18,6 +18,7 @@ namespace LoginViewSample.Core.ViewModels
                 AreCredentialsInvalid = !UserAuthenticated(Username, Password);
                 if (AreCredentialsInvalid) return;
 
+                App.IsUserLoggedIn = true;
                 navigationService.GoBack();
             });
 

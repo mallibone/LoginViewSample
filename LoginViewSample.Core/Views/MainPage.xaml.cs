@@ -14,5 +14,18 @@ namespace LoginViewSample.Core.Views
 		}
 
 	    public MainViewModel ViewModel { get; } = new MainViewModel(App.NavigationService);
+
+	    #region Overrides of Page
+
+	    protected override void OnAppearing()
+	    {
+	        if (!App.IsUserLoggedIn)
+	        {
+	            App.NavigationService.NavigateModalAsync(PageNames.LoginPage, false);
+	        }
+	        base.OnAppearing();
+	    }
+
+	    #endregion
 	}
 }

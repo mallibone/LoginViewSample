@@ -14,5 +14,14 @@ namespace LoginViewSample.Core.Views
 		}
 
 	    public LoginViewModel ViewModel { get; set; } = new LoginViewModel(App.NavigationService);
+
+	    #region Overrides of Page
+
+	    protected override bool OnBackButtonPressed()
+	    {
+	        return true;
+	    }
+
+	    #endregion
 	}
 }

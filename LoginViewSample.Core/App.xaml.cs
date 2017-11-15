@@ -20,6 +20,9 @@ namespace LoginViewSample.Core
 
 	    public static INavigationService NavigationService { get; } = _navigationService;
 
+        // Use a service for providing this information
+        public static bool IsUserLoggedIn { get; set; }
+
 	    protected override void OnStart ()
 		{
 			// Handle when your app starts

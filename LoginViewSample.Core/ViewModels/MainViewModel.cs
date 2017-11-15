@@ -20,6 +20,7 @@ namespace LoginViewSample.Core.ViewModels
 
         private void Logout()
         {
+            App.IsUserLoggedIn = false;
             _navigationService.NavigateModalAsync(PageNames.LoginPage);
         }
 
