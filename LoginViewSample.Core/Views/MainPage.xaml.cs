@@ -27,9 +27,8 @@ namespace LoginViewSample.Core.Views
 
             if (!App.IsUserLoggedIn)
             {
-                await Task.Yield();
                 if (App.NavigationService.CurrentPageKey == PageNames.LoginPage) return;
-                await App.NavigationService.NavigateModalAsync(PageNames.LoginPage, false);
+                await App.NavigationService.NavigateModalAsync(PageNames.LoginPage, true);
             }
         }
 	}
